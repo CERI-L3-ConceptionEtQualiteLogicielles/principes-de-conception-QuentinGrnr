@@ -4,5 +4,5 @@
 - rename de ContactService en ContactsServices => Nom plus représentatif
 - Remoove static de List<Contact> lesContacts => Permettre la création de plusieurs listes de clients
 - ajout de final List<Contact> lesContacts => empécher le changement de ArrayList
-- Ajout de l'interface ContactServices -> pour chaque action qu'un contact peut faire
+- Ajout de l'interface ContactServices -> pour chaque action qu'un contact peut faire -> Interface ségragation
 - Suppréssion de getInfoContact et utilisation de toString définit dans Contact dans afficherContact => éviter code duplication

@@ -1,5 +1,5 @@
 package exo1;
 
-public interface ContactServices {
+public interface MailServices {
     void envoiEmail(Contact contact, String message);
 }
