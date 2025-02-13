@@ -3,9 +3,9 @@ package exo1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Contact {
-    private String nom;
-    private String numero;
+public class Contact{
+    private final String nom;
+    private final String numero;
 
     public Contact(String nom, String numero) {
         this.nom = nom;
@@ -20,8 +20,8 @@ public class Contact {
         return numero;
     }
 
-    public String getInfosContact (){
-        return this.toString();
+    public String getInfosContact(ContactPrinter format) {
+        return format.getInfoContact(this);
     }
 
     @Override
