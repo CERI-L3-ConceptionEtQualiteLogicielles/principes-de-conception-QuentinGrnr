@@ -20,6 +20,10 @@ public class Contact {
         return numero;
     }
 
+    public String getInfosContact (){
+        return this.toString();
+    }
+
     @Override
     public String toString() {
         return "Nom: " + getNom() + ", Numéro: " + getNumero();
