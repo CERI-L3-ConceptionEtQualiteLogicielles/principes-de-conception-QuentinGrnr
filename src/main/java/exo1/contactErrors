@@ -1,0 +1,8 @@
+- Single Responsability (SRP) :La classe Contact ne gère plus la liste de contacts, elle se concentre uniquement sur les attributs d'un contact. Une classe ContactManager gère les opérations sur la collection de contacts (ajouteContact, supprimeContact, afficheContacts).
+- Open/Closed (OCP) : ContactManager peut être étendue pour ajouter de nouvelles fonctionnalités sans modifier la classe Contact.
+- Supression de la definition de la méthode envoie mail dans ContactService => inutile sur une liste de constacts -> Ajout d'une Interface ContactService
+- rename de ContactService en ContactsServices => Nom plus représentatif
+- Remoove static de List<Contact> lesContacts => Permettre la création de plusieurs listes de clients
+- ajout de final List<Contact> lesContacts => empécher le changement de ArrayList
+- Ajout de l'interface ContactServices -> pour chaque action qu'un contact peut faire
+- Suppréssion de getInfoContact et utilisation de toString définit dans Contact dans afficherContact => éviter code duplication
