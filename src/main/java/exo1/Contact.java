@@ -1,16 +1,13 @@
 package exo1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Contact{
-    private final String nom;
-    private final String numero;
+    private String nom;
+    private String numero;
+    private String prenom;
+    private String civilite;
 
-    public Contact(String nom, String numero) {
-        this.nom = nom;
-        this.numero = numero;
-    }
+
+    private Contact () {}
 
     public String getNom() {
         return nom;
@@ -26,7 +23,43 @@ public class Contact{
 
     @Override
     public String toString() {
-        return "Nom: " + getNom() + ", Numéro: " + getNumero();
+        return "Contact{" +
+                "nom='" + nom + '\'' +
+                ", numero='" + numero + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", civilite='" + civilite + '\'' +
+                '}';
+    }
+
+    public static class ContactBuilder {
+        private String nom;
+        private String numero;
+        private String prenom = "Undefined";
+        private String civilite = "Undefined";
+
+        public ContactBuilder(String nom, String numero) {
+            this.nom = nom;
+            this.numero = numero;
+        }
+
+        public ContactBuilder addPrenom(String prenom) {
+            this.prenom = prenom;
+            return this;
+        }
+
+        public ContactBuilder addCivilite(String civilite) {
+            this.civilite = civilite;
+            return this;
+        }
+
+        public Contact build() {
+            Contact contact =  new Contact();
+            contact.nom = this.nom;
+            contact.numero = this.numero;
+            contact.prenom = this.prenom;
+            contact.civilite = this.civilite;
+            return contact;
+        }
     }
 }
 
