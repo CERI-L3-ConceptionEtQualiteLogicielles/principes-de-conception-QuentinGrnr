@@ -17,6 +17,14 @@ public class Contact{
         return numero;
     }
 
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getCivilite() {
+        return civilite;
+    }
+
     public String getInfosContact(ContactPrinter format) {
         return format.getInfoContact(this);
     }
